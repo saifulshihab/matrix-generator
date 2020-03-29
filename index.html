@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate Matrix</title>
+
+    <style>
+		body{		
+		padding:10px;
+		text-align: center;
+		}
+        .matrix_wrapper .nav {
+            margin-bottom: 20px;
+        }
+
+        .circle {
+            width: 80px;
+            height: 80px;
+            display: inline-block;
+            border-radius: 50%;
+            border: 1px solid black;
+        }
+
+        .greenbg {
+            background: green;
+        }
+
+        .yellowbg {
+            background: yellow;
+        }
+
+        .redbg {
+            background: red !important;
+        }
+		#generate{background: #646161;
+				color: white;
+				padding: 4px;
+				border-radius: 40px;
+		}
+		#size{
+			border-radius:40px;
+			padding: 3.5px;
+			text-align: center;
+		}
+    </style>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="app.js" defer></script>
+</head>
+
+<body>
+    <div class="matrix_wrapper">
+        <div class="nav">
+            <select name="" id="size">
+                <option value="" disabled selected>--Select Matrix Size--</option>
+                <option value="3">3x3</option>
+                <option value="5">5x5</option>
+                <option value="7">7x7</option>
+                <option value="9">9x9</option>
+                <option value="11">11x11</option>
+                <option value="13">13x13</option>
+                <option value="15">15x15</option>
+            </select>
+
+            <button id="generate">Generate Matrix</button>
+        </div>
+        <div id="matrixes">
+
+        </div>
+    </div>
+</body>
+
+</html>
