@@ -5,4 +5,4 @@
 
 <img src="matrix.png" />
 
-            <a href="https://saifulshihab.github.io/matrix-generator/" target="_blank" class="btn btn-sm btn-block btn-secondary">Live</a>
+            <a href="https://saifulshihab.github.io/matrix-generator/" target="_blank">Live</a>
