@@ -1,16 +1,16 @@
-var generate_btn = document.getElementById("generate");
-var matrix_box = document.getElementById("matrixes");
+const generate_btn = document.getElementById("generate");
+const matrix_box = document.getElementById("matrixes");
 
 generate_btn.addEventListener("click", createMatrix);
 
 function createMatrix() {
   document.getElementById("matrixes").innerHTML = "";
-  var i;
-  var size = document.getElementById("size").value;
-  sizes = size;
-  var center = sizes / 2 + 1;
+  let i;
+  let size = document.getElementById("size").value;
+  let sizes = size;
+  let center = sizes / 2 + 1;
   if (!sizes) {
-    console.log("Size not found.");
+    alert("Select matrix size!");
   } else {
     for (i = 1; i <= sizes; i++) {
       if (i % 2 == 0) {
@@ -48,24 +48,24 @@ function createMatrix() {
           }
         }
       }
-      var y = document.createElement("BR");
+      let y = document.createElement("BR");
       matrix_box.appendChild(y);
     }
   }
 }
 
 function createYellwoCircle() {
-  var x = document.createElement("div");
+  let x = document.createElement("div");
   x.setAttribute("class", "circle yellowbg");
   matrix_box.appendChild(x);
 }
 function createGreenCircle() {
-  var x = document.createElement("div");
+  let x = document.createElement("div");
   x.setAttribute("class", "circle greenbg");
   matrix_box.appendChild(x);
 }
 function createRedCircle() {
-  var x = document.createElement("div");
+  let x = document.createElement("div");
   x.setAttribute("class", "circle redbg");
   matrix_box.appendChild(x);
 }
