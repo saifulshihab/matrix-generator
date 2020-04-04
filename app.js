@@ -16,20 +16,20 @@ function createMatrix() {
       if (i % 2 == 0) {
         if (i == Math.floor(center)) {
           for (j = 1; j <= sizes; j++) {
-            if (j == Math.floor(center)) {
-              createRedCircle();
-            } else if (j % 2 == 0) {
-              createYellwoCircle();
+            if (j == Math.floor(center)) {              
+              createCurcle("RED");
+            } else if (j % 2 == 0) {              
+              createCurcle("YELLOW");
             } else {
-              createGreenCircle();
+              createCurcle("GREEN");
             }
           }
         } else {
           for (j = 1; j <= sizes; j++) {
             if (j % 2 == 0) {
-              createYellwoCircle();
+              createCurcle("YELLOW");
             } else {
-              createGreenCircle();
+              createCurcle("GREEN");
             }
           }
         }
@@ -37,14 +37,14 @@ function createMatrix() {
         if (i == Math.floor(center)) {
           for (j = 1; j <= sizes; j++) {
             if (j == Math.floor(center)) {
-              createRedCircle();
+              createCurcle("RED");
             } else {
-              createGreenCircle();
+              createCurcle("GREEN");
             }
           }
         } else {
           for (j = 1; j <= sizes; j++) {
-            createGreenCircle();
+            createCurcle("GREEN");
           }
         }
       }
@@ -54,18 +54,16 @@ function createMatrix() {
   }
 }
 
-function createYellwoCircle() {
+function createCurcle(color){
   let x = document.createElement("div");
-  x.setAttribute("class", "circle yellowbg");
-  matrix_box.appendChild(x);
-}
-function createGreenCircle() {
-  let x = document.createElement("div");
-  x.setAttribute("class", "circle greenbg");
-  matrix_box.appendChild(x);
-}
-function createRedCircle() {
-  let x = document.createElement("div");
-  x.setAttribute("class", "circle redbg");
+  if(color === "GREEN"){
+    x.setAttribute("class", "circle greenbg");
+  }else if(color === "YELLOW"){
+    x.setAttribute("class", "circle yellowbg");
+  }else if(color === "RED"){
+    x.setAttribute("class", "circle redbg");
+  }else{
+    alert("Error");
+  }
   matrix_box.appendChild(x);
 }
